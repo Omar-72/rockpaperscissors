@@ -1,26 +1,42 @@
 $(".play").click(function(){
-  let choice = $(".input").val();
-  $(".userChoice").text(choice);
-  let playerMove;
-  if (choice === 'rock') {
-    playerMove = 1;
-  } else if (choice === 'paper') {
-    playerMove = 2;
-  } else if (choice === 'scissors') {
-    playerMove = 3;
-  }
+  let choice = $(".input").val().toLowerCase();
+if (choice === 'rock') { 
+  $(".userChoice").text("Rock")
+} else if (choice === 'paper') {
+    $(".userChoice").text("Paper")
+}else if (choice === 'scissors') {
+    $(".userChoice").text("Scissors")
+} else if (choice !== 'rock' || choice !== 'paper' || choice !== 'scissors'){
+      $(".userChoice").text("Please try again")
+}
   
   let computer = Math.ceil(Math.random()*3);
+  let computerMove;
   if (computer === 1){
     $(".computerChoice").text("Rock");
+    computerMove = "rock";
   } else if (computer === 2){
     $(".computerChoice").text("Paper");
+    computerMove = "paper";
   } else if (computer === 3){
     $(".computerChoice").text("Scissors");
-  } 
-if (choice !== "rock") {
-  $(".userChoice").text("Enter correct responed")
-} 
+    computerMove = "scissors";
+  }
+  
+  if (choice === 'rock' && computerMove === 'scissors') {
+    $(".result").text("You Win!")
+  } else if (choice === 'rock' && computerMove === 'paper'){
+    $(".result").text("Computer Win!")
+  } else if (choice === 'rock' && computerMove === 'rock'){
+    $(".result").text("It's a Tie")
+  }
+  if (choice === 'paper' && computerMove === 'rock') {
+        $(".result").text("You Win!")
+  } else if (choice === 'paper' && computerMove === 'scissors'){
+            $(".result").text("Computer Win!")
+  } else if (choice === 'paper' && computerMove === 'paper'){
+            $(".result").text("It's a Tie")
+  }
 });
 
 ///Or you can use this code to randomize words. 
