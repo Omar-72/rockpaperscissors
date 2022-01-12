@@ -4,30 +4,35 @@
     <title>RPS Game</title>
     <!-- Link CSS here -->
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <style>
+body {
+  background-image: url('https://c.tenor.com/RqH54jCv970AAAAC/lines.gif');
+}
+</style>
   </head>
 
   <body>
     <div class="row">
-      <h1>Rock Paper Scissors</h1>
+      <h1 class="change">Rock Paper Scissors</h1>
       <img src="https://static.vecteezy.com/system/resources/previews/000/691/497/non_2x/rock-paper-scissors-neon-icons-vector.jpg" />
 
-      <h3>Please Submit Your Choice Below</h3>
+      <h3 class="change">Please Submit Your Choice Below</h3>
       <div>
         <input class="input" />
         <button class="play">play!</button>
       </div>
-
-      <div class="choices" class="row">
+      
+      <div class="choice row"> 
         <div>
-          <h4>User Choice</h4>
-          <p class="userChoice"></p>
+          <h4 class="change">User Choice</h4>
+          <p class="userChoice change"></p>
         </div>
         <div>
-          <h4>Computer Choice</h4>
-          <p class="computerChoice"></p>
+          <h4 class="change">Computer Choice</h4>
+          <p class="computerChoice change"></p>
         </div>
       </div>
-      <div class="result"></div>
+      <div class="result change"></div>
     </div>
 
     <!-- Link JQuery here -->

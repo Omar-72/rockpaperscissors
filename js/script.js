@@ -30,6 +30,7 @@ if (choice === 'rock') {
   } else if (choice === 'rock' && computerMove === 'rock'){
     $(".result").text("It's a Tie")
   }
+  
   if (choice === 'paper' && computerMove === 'rock') {
         $(".result").text("You Win!")
   } else if (choice === 'paper' && computerMove === 'scissors'){
@@ -37,8 +38,19 @@ if (choice === 'rock') {
   } else if (choice === 'paper' && computerMove === 'paper'){
             $(".result").text("It's a Tie")
   }
+  
+  if (choice === 'scissors' && computerMove === 'paper') {
+        $(".result").text("You Win!")
+  } else if (choice === 'scissors' && computerMove === 'rock'){
+            $(".result").text("Computer Win!")
+  } else if (choice === 'scissors' && computerMove === 'scissors'){
+            $(".result").text("It's a Tie")
+  }
 });
 
+function (img) {
+    $(".result").html(`<img src='${img}'>`);
+}
 ///Or you can use this code to randomize words. 
  ///let Moves = (arr) => arr[Math.floor(Math.random()*arr.length)];
 //let computerMove = Moves(['rock', 'paper', 'scissors'])   
