@@ -1,11 +1,18 @@
-.row {
+.row { 
   text-align: center;
+  
 }
 .choices {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  
 }
 
-img{width: 300px;}
+img {
+  width: 300px;
+}
 
-.change{color: white;}
+.change {
+  color: #00d5ff;
+}
+
